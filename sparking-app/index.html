@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pametni Parking</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">PAMETNI PARKING</a>
+            </div>
+    
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">O nama</a><span class="hover"></span></li>
+                    <li><a href="#">Servisi</a><span class="hover"></span></li>
+                    <li><a href="#">Gradovi</a><span class="hover"></span></li>
+                    <li><a href="#">Stranice</a><span class="hover"></span></li>
+                    <li><a href="#">Kontakt</a><span class="hover"></span></li>
+                    <li><a href="#">Informacije</a><span class="hover"></span></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><p id="vrijemeUlaskaIzlaska">Vrijeme ulaska: - | Vrijeme izlaska: - | Cijena: - </p></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="parking-container">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xs-4">
+                    <div class="parking-space">
+                        <div class="parking-letter">P</div>
+                    </div>
+                    <button id="parkingMjesto1" class="parking-button btn btn-primary" onclick="onButtonToggleClick('parkingMjesto1')">Rezerviši</button>
+                    <button id="parkingMjesto1" class="ramp-button btn btn-secondary" onclick="rampa('parkingMjesto1')">Podigni rampu</button>
+                    <button id="mahanjeBtn" class="ramp-button btn btn-secondary">Mahanje</button>
+                    <div id="inputDiv1" class ="input-div" style="display: none;">
+                        <input type="text" id="kodInput1" placeholder="Unesite kod">
+                        <button id="potvrdiButton1" onclick="proveriKod(1)">Potvrdi kod</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="parking-space">
+                        <div class="parking-letter">P</div>
+                    </div>
+                    <button id="parkingMjesto2" class="parking-button btn btn-primary" onclick="onButtonToggleClick('parkingMjesto2')">Rezerviši</button>
+                    <button id="parkingMjesto2" class="ramp-button btn btn-secondary" onclick="rampa('parkingMjesto2')">Podigni rampu</button>
+                    <div id="inputDiv2" class ="input-div" style="display: none;">
+                        <input type="text" id="kodInput2" placeholder="Unesite kod">
+                        <button id="potvrdiButton2" onclick="proveriKod(2)">Potvrdi kod</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="parking-space">
+                        <div class="parking-letter">P</div>
+                    </div>
+                    <button id="parkingMjesto3" class="parking-button btn btn-primary" onclick="onButtonToggleClick('parkingMjesto3')">Rezerviši</button>
+                    <button id="parkingMjesto3" class="ramp-button btn btn-secondary" onclick="rampa('parkingMjesto3')">Podigni rampu</button>
+                    <div id="inputDiv3" class ="input-div" style="display: none;">
+                        <input type="text" id="kodInput3" placeholder="Unesite kod">
+                        <button id="potvrdiButton3" onclick="proveriKod(3)">Potvrdi kod</button>
+                    </div>
+                </div>
+            <div class="row text-center">
+                <div class="col-xs-4">
+                    <div class="parking-space">
+                        <div class="parking-letter">P</div>
+                    </div>
+                    <button id="parkingMjesto4" class="parking-button btn btn-primary" onclick="onButtonToggleClick('parkingMjesto4')">Rezerviši</button>
+                    <button id="parkingMjesto4" class="ramp-button btn btn-secondary" onclick="rampa('parkingMjesto4')">Podigni rampu</button>
+                    <div id="inputDiv4" class ="input-div" style="display: none;">
+                        <input type="text" id="kodInput4" placeholder="Unesite kod">
+                        <button id="potvrdiButton4" onclick="proveriKod(4)">Potvrdi kod</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="parking-space">
+                        <div class="parking-letter">P</div>
+                    </div>
+                    <button id="parkingMjesto5" class="parking-button btn btn-primary" onclick="onButtonToggleClick('parkingMjesto5')">Rezerviši</button>
+                    <button id="parkingMjesto5" class="ramp-button btn btn-secondary" onclick="rampa('rampa5')">Podigni rampu</button>
+                    <div id="inputDiv5" class ="input-div" style="display: none;">
+                        <input type="text" id="kodInput5" placeholder="Unesite kod">
+                        <button id="potvrdiButton5" onclick="proveriKod(5)">Potvrdi kod</button>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="parking-space">
+                        <div class="parking-letter">P</div>
+                    </div>
+                    <button id="parkingMjesto6" class="parking-button btn btn-primary" onclick="onButtonToggleClick('parkingMjesto6')">Rezerviši</button>
+                    <button id="parkingMjesto6" class="ramp-button btn btn-secondary" onclick="rampa('parkingMjesto6')">Podigni rampu</button>
+                    <div id="inputDiv6" class ="input-div" style="display: none;">
+                        <input type="text" id="kodInput6" placeholder="Unesite kod">
+                        <button id="potvrdiButton6" onclick="proveriKod(6)">Potvrdi kod</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Sva prava zadržana</a></li>
+                        <li><a href="#">Početna</a></li>
+                        <li><a href="#">Informacije</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="./code.js"></script>
+</body>
+</html>
